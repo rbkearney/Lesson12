@@ -1,0 +1,67 @@
+@media print {
+
+    body {
+        font-family: 12pt 'Times New Roman', Times, serif;
+        line-height: 1.0;
+    }
+
+    h1 {
+        font-size: 25pt;
+    }
+
+    h2 {
+        font-size: 14pt;
+        margin-top: 25px;
+    }
+
+    aside h2 {
+        font-size: 18pt;
+    }
+
+    img {
+        border: 0;
+    }
+
+
+    header {
+        margin-bottom:40px;
+    }
+
+    header::after {
+        content: "https://reginaldsblog.home.blog/";
+    }
+
+    header:before {
+        content: "Thank you for printing my portfolio. Please check back soon for new content.";
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #bbb;
+        padding: 3px 5px; 
+        font-style: italic; 
+    }
+
+    blockquote {
+        font-size: 13pt;
+        font-style: italic;
+    }
+
+    p a {
+        color: #000;
+    }
+
+    p a:after {
+        content: " (https://reginaldsblog.home.blog/" attr(href) ")";
+        word-wrap: break-word;
+    }
+
+
+    p a[href^="http://"]:after, p a[href^="https://"]:after {
+        content: " (" attr(href) ")";
+    }
+
+    aside {
+        border-top: 1px solid #bbb;
+        margin-top: 30px;
+        page-break-before: always;
+    }
+}
